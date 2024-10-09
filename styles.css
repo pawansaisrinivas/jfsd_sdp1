@@ -1,0 +1,202 @@
+/* Reset and Box Sizing */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Body Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Header Styling */
+header {
+    background: #007bff;
+    color: #fff;
+    padding: 20px 0;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    border-radius: 10px; /* Rounded corners */
+    background: rgba(255, 255, 255, 0.1); /* Semi-transparent background */
+    box-shadow: 
+        0 0 5px #00ffcc,
+        0 0 10px #00ffcc,
+        0 0 20px #00ffcc,
+        0 0 30px #00ffcc;
+    transition: background 0.3s; /* Smooth background change */
+}
+
+header .container:hover {
+    background: rgba(255, 255, 255, 0.2); /* Darker on hover */
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+/* Navbar Links with Neon Effect */
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s, text-shadow 0.3s;
+    position: relative;
+}
+
+nav ul li a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px; /* Adjust as needed */
+    width: 100%;
+    height: 3px; /* Height of the neon glow */
+    background: rgba(255, 255, 255, 0.5);
+    filter: blur(4px);
+    opacity: 0; /* Start hidden */
+    transition: opacity 0.3s;
+}
+
+nav ul li a:hover {
+    color: #d1e7ff;
+    text-shadow: 0 0 5px #00ffcc, 0 0 10px #00ffcc, 0 0 15px #00ffcc;
+}
+
+nav ul li a:hover::after {
+    opacity: 1; /* Show glow on hover */
+}
+
+/* Hero Section */
+#hero {
+    background: #6c757d;
+    color: #fff;
+    padding: 80px 0;
+    text-align: center;
+}
+
+#hero h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+#hero p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+#hero .btn {
+    background: #28a745;
+    color: #fff;
+    padding: 12px 24px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+#hero .btn:hover {
+    background: #218838;
+}
+
+/* Section Styling */
+section {
+    padding: 60px 0;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+}
+
+/* About Section */
+#about p {
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.5;
+}
+
+/* Project Card Styling */
+.project-card {
+    background: #fff;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.project-card h3 {
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+}
+
+/* Contact Form Styling */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form input, form textarea {
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    transition: border 0.3s;
+}
+
+form input:focus, form textarea:focus {
+    border: 1px solid #007bff;
+    outline: none;
+}
+
+/* Login and Signup Sections */
+#login, #signup {
+    background: #fff;
+    padding: 40px;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    margin: 20px 0;
+}
+
+#login h2, #signup h2 {
+    margin-bottom: 20px;
+}
+
+/* Buttons in Forms */
+button {
+    background: #007bff;
+    color: #fff;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background: #0056b3;
+}
+
+/* Footer Styling */
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
